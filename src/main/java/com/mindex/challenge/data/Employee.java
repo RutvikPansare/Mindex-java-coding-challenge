@@ -2,7 +2,7 @@ package com.mindex.challenge.data;
 
 import java.util.List;
 
-public class Employee {
+public class Employee{
     private String employeeId;
     private String firstName;
     private String lastName;
@@ -60,4 +60,5 @@ public class Employee {
     public void setDirectReports(List<Employee> directReports) {
         this.directReports = directReports;
     }
+
 }

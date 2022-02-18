@@ -7,6 +7,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @RestController
 public class EmployeeController {
     private static final Logger LOG = LoggerFactory.getLogger(EmployeeController.class);
@@ -16,6 +19,11 @@ public class EmployeeController {
 
     @PostMapping("/employee")
     public Employee create(@RequestBody Employee employee) {
+        Map<Character,Integer> map = new HashMap<>();
+        String word = "wosi";
+        for (Character ch:
+             map.keySet()) {
+        }
         LOG.debug("Received employee create request for [{}]", employee);
 
         return employeeService.create(employee);
@@ -31,7 +39,6 @@ public class EmployeeController {
     @PutMapping("/employee/{id}")
     public Employee update(@PathVariable String id, @RequestBody Employee employee) {
         LOG.debug("Received employee create request for id [{}] and employee [{}]", id, employee);
-
         employee.setEmployeeId(id);
         return employeeService.update(employee);
     }

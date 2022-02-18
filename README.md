@@ -58,6 +58,8 @@ For all endpoints that require an "id" in the URL, this is the "employeeId" fiel
 ## What to Implement
 Clone or download the repository, do not fork it.
 
+
+
 ### Task 1
 Create a new type, ReportingStructure, that has two properties: employee and numberOfReports.
 
@@ -76,6 +78,18 @@ The numberOfReports for employee John Lennon (employeeId: 16a596ae-edd3-4847-99f
 This new type should have a new REST endpoint created for it. This new endpoint should accept an employeeId and return 
 the fully filled out ReportingStructure for the specified employeeId. The values should be computed on the fly and will 
 not be persisted.
+
+
+Below are the end points for Task2:
+* CREATE
+    * HTTP Method: POST 
+    * URL: localhost:8080/compensation
+    * PAYLOAD: Compensation
+    * RESPONSE: Compensation
+* READ BY Employee ID
+    * HTTP Method: GET 
+    * URL: localhost:8080/compensation/{id}
+    * RESPONSE: Compensation
 
 ### Task 2
 Create a new type, Compensation. A Compensation has the following fields: employee, salary, and effectiveDate. Create 
